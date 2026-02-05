@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "experience": "Expérience",
+    "education": "Formation",
+    "skills": "Compétences",
+    "contact": "Contact"
+  },
+  "section": {
+    "experience": "Expérience",
+    "education": "Formation",
+    "skills": "Compétences",
+    "contact": "Contact"
+  },
+  "contact": {
+    "email": "Email",
+    "phone": "Téléphone",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  }
+}
