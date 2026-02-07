@@ -43,7 +43,7 @@ export function HeroSection({ name, titles, summary, locale }: Props) {
         className="flex flex-col"
       >
         <motion.div variants={itemVars} className="mb-6">
-          <span className="inline-block py-1 px-2 bg-black text-white text-[10px] font-bold tracking-[0.3em] uppercase">
+          <span className="inline-block py-1 px-2 bg-black dark:bg-white text-white dark:text-black text-[10px] font-bold tracking-[0.3em] uppercase">
             Portfolio 2025
           </span>
         </motion.div>
@@ -55,17 +55,17 @@ export function HeroSection({ name, titles, summary, locale }: Props) {
           {firstName}
           <br />
           {lastName}
-          <span className="text-[#0033ff]">.</span>
+          <span className="text-[#0033ff] dark:text-[#4d6fff]">.</span>
         </motion.h1>
 
         <motion.div
           variants={lineVars}
-          className="h-px bg-black/10 w-full origin-left mb-10"
+          className="h-px bg-black/10 dark:bg-white/10 w-full origin-left mb-10"
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
           <motion.div variants={itemVars} className="lg:col-span-4">
-            <h2 className="text-xs font-bold tracking-[0.2em] uppercase text-black/40 mb-4">
+            <h2 className="text-xs font-bold tracking-[0.2em] uppercase text-black/40 dark:text-white/40 mb-4">
               {locale === 'en' ? 'Core Focus' : 'Domaines Clés'}
             </h2>
             <ul className="space-y-3">
@@ -74,10 +74,10 @@ export function HeroSection({ name, titles, summary, locale }: Props) {
                   key={label.en}
                   className="flex items-center gap-3 group cursor-default"
                 >
-                  <div className="w-5 h-5 flex items-center justify-center border border-black/10 group-hover:border-[#0033ff] transition-colors">
+                  <div className="w-5 h-5 flex items-center justify-center border border-black/10 dark:border-white/10 group-hover:border-[#0033ff] dark:group-hover:border-[#4d6fff] transition-colors">
                     <Icon
                       size={10}
-                      className="group-hover:text-[#0033ff] transition-colors"
+                      className="group-hover:text-[#0033ff] dark:group-hover:text-[#4d6fff] transition-colors"
                     />
                   </div>
                   <span className="text-[13px] font-medium tracking-tight">
@@ -89,13 +89,13 @@ export function HeroSection({ name, titles, summary, locale }: Props) {
           </motion.div>
 
           <motion.div variants={itemVars} className="lg:col-span-5">
-            <h2 className="text-xs font-bold tracking-[0.2em] uppercase text-black/40 mb-4">
+            <h2 className="text-xs font-bold tracking-[0.2em] uppercase text-black/40 dark:text-white/40 mb-4">
               {locale === 'en' ? 'About' : 'À propos'}
             </h2>
-            <p className="text-base md:text-lg leading-relaxed tracking-tight text-black/80">
+            <p className="text-base md:text-lg leading-relaxed tracking-tight text-black/80 dark:text-white/80">
               {summary}
             </p>
-            <p className="text-sm text-black/40 mt-4">{titles}</p>
+            <p className="text-sm text-black/40 dark:text-white/40 mt-4">{titles}</p>
           </motion.div>
 
           <motion.div
@@ -104,7 +104,7 @@ export function HeroSection({ name, titles, summary, locale }: Props) {
           >
             <a
               href="#contact"
-              className="group relative flex items-center justify-center gap-3 bg-black text-white px-8 py-4 transition-all hover:bg-[#0033ff] active:scale-95"
+              className="group relative flex items-center justify-center gap-3 bg-black dark:bg-white text-white dark:text-black px-8 py-4 transition-all hover:bg-[#0033ff] dark:hover:bg-[#4d6fff] hover:text-white dark:hover:text-white active:scale-95"
             >
               <span className="text-[11px] font-bold tracking-[0.2em] uppercase">
                 {locale === 'en' ? 'Get in Touch' : 'Me Contacter'}

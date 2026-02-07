@@ -10,10 +10,10 @@ export function SectionHeading({ label }: { label: string }) {
       viewport={{ once: true, margin: '-60px' }}
       className="flex items-center gap-4 mb-12"
     >
-      <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-[#0033ff]">
+      <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-[#0033ff] dark:text-[#4d6fff]">
         {label}
       </span>
-      <div className="h-px bg-[#0033ff]/20 flex-1" />
+      <div className="h-px bg-[#0033ff]/20 dark:bg-[#4d6fff]/20 flex-1" />
     </motion.div>
   );
 }

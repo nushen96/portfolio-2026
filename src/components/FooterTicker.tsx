@@ -8,9 +8,9 @@ export function FooterTicker({ locale }: { locale: Locale }) {
   const doubled = [...skills, ...skills];
 
   return (
-    <footer className="fixed bottom-0 left-0 w-full z-40 bg-white/80 backdrop-blur-sm border-t border-black/5 px-4 py-3 flex justify-between items-center overflow-hidden">
+    <footer className="fixed bottom-0 left-0 w-full z-40 bg-white/80 dark:bg-[#0a0a0a]/80 backdrop-blur-sm border-t border-black/5 dark:border-white/5 px-4 py-3 flex justify-between items-center overflow-hidden">
       <div className="flex items-center gap-3 whitespace-nowrap px-2 shrink-0">
-        <div className="w-2 h-2 rounded-full bg-[#0033ff] animate-pulse" />
+        <div className="w-2 h-2 rounded-full bg-[#0033ff] dark:bg-[#4d6fff] animate-pulse" />
         <span className="text-[10px] font-bold tracking-[0.1em] uppercase">
           {locale === 'en'
             ? 'Available for collaborations'

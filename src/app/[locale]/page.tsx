@@ -18,13 +18,13 @@ export default async function HomePage({ params }: Props) {
   const t = await getTranslations('section');
 
   return (
-    <div className="relative min-h-screen w-full bg-white text-black selection:bg-[#0033ff] selection:text-white overflow-x-hidden">
+    <div className="relative min-h-screen w-full bg-white dark:bg-[#0a0a0a] text-black dark:text-[#f0f0f0] selection:bg-[#0033ff] selection:text-white overflow-x-hidden">
       {/* Swiss Grid Background */}
       <div
         className="fixed inset-0 z-0 opacity-[0.03] pointer-events-none"
         style={{
           backgroundImage:
-            'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)',
+            'linear-gradient(var(--color-grid) 1px, transparent 1px), linear-gradient(90deg, var(--color-grid) 1px, transparent 1px)',
           backgroundSize: '40px 40px',
         }}
       />
@@ -51,17 +51,17 @@ export default async function HomePage({ params }: Props) {
             {portfolio.education.map((edu) => (
               <div
                 key={edu.school}
-                className="flex flex-col md:flex-row justify-between py-8 border-b border-black/5 items-start md:items-center"
+                className="flex flex-col md:flex-row justify-between py-8 border-b border-black/5 dark:border-white/5 items-start md:items-center"
               >
                 <div className="flex flex-col gap-1">
-                  <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#0033ff]">
+                  <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#0033ff] dark:text-[#4d6fff]">
                     {edu.school}
                   </span>
                   <h4 className="text-xl font-bold tracking-tight">
                     {edu.degree}
                   </h4>
                 </div>
-                <span className="text-xs font-mono font-medium text-black/40 mt-2 md:mt-0">
+                <span className="text-xs font-mono font-medium text-black/40 dark:text-white/40 mt-2 md:mt-0">
                   {edu.year}
                 </span>
               </div>
@@ -79,7 +79,7 @@ export default async function HomePage({ params }: Props) {
             {portfolio.skills.map((skill) => (
               <span
                 key={skill}
-                className="px-5 py-3 border border-black/10 hover:border-[#0033ff] transition-colors text-sm font-medium tracking-tight cursor-default"
+                className="px-5 py-3 border border-black/10 dark:border-white/10 hover:border-[#0033ff] dark:hover:border-[#4d6fff] transition-colors text-sm font-medium tracking-tight cursor-default"
               >
                 {skill}
               </span>
@@ -93,13 +93,13 @@ export default async function HomePage({ params }: Props) {
           className="px-6 md:px-10 max-w-7xl mx-auto py-24 lg:py-32 mb-16"
         >
           <SectionHeading label={t('contact')} />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-black/5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-black/5 dark:bg-white/5">
             <a
               href={`mailto:${portfolio.profile.contact.email}`}
-              className="group flex flex-col gap-4 p-8 bg-white hover:bg-black hover:text-white transition-all"
+              className="group flex flex-col gap-4 p-8 bg-white dark:bg-[#0a0a0a] hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all"
             >
-              <Mail size={20} className="text-[#0033ff]" />
-              <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-black/40 group-hover:text-white/40">
+              <Mail size={20} className="text-[#0033ff] dark:text-[#4d6fff]" />
+              <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-black/40 dark:text-white/40 group-hover:text-white/40 dark:group-hover:text-black/40">
                 Email
               </span>
               <span className="text-sm font-bold truncate">
@@ -108,10 +108,10 @@ export default async function HomePage({ params }: Props) {
             </a>
             <a
               href={`tel:${portfolio.profile.contact.phone.replace(/\s/g, '')}`}
-              className="group flex flex-col gap-4 p-8 bg-white hover:bg-black hover:text-white transition-all"
+              className="group flex flex-col gap-4 p-8 bg-white dark:bg-[#0a0a0a] hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all"
             >
-              <Phone size={20} className="text-[#0033ff]" />
-              <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-black/40 group-hover:text-white/40">
+              <Phone size={20} className="text-[#0033ff] dark:text-[#4d6fff]" />
+              <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-black/40 dark:text-white/40 group-hover:text-white/40 dark:group-hover:text-black/40">
                 {validLocale === 'en' ? 'Phone' : 'Téléphone'}
               </span>
               <span className="text-sm font-bold">
@@ -122,10 +122,10 @@ export default async function HomePage({ params }: Props) {
               href={`https://github.com/${portfolio.profile.contact.github}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col gap-4 p-8 bg-white hover:bg-black hover:text-white transition-all"
+              className="group flex flex-col gap-4 p-8 bg-white dark:bg-[#0a0a0a] hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all"
             >
-              <Github size={20} className="text-[#0033ff]" />
-              <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-black/40 group-hover:text-white/40">
+              <Github size={20} className="text-[#0033ff] dark:text-[#4d6fff]" />
+              <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-black/40 dark:text-white/40 group-hover:text-white/40 dark:group-hover:text-black/40">
                 GitHub
               </span>
               <span className="text-sm font-bold">
@@ -136,10 +136,10 @@ export default async function HomePage({ params }: Props) {
               href={`https://linkedin.com/in/${portfolio.profile.contact.linkedin}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col gap-4 p-8 bg-white hover:bg-black hover:text-white transition-all"
+              className="group flex flex-col gap-4 p-8 bg-white dark:bg-[#0a0a0a] hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all"
             >
-              <Linkedin size={20} className="text-[#0033ff]" />
-              <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-black/40 group-hover:text-white/40">
+              <Linkedin size={20} className="text-[#0033ff] dark:text-[#4d6fff]" />
+              <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-black/40 dark:text-white/40 group-hover:text-white/40 dark:group-hover:text-black/40">
                 LinkedIn
               </span>
               <span className="text-sm font-bold">

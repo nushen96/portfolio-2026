@@ -8,6 +8,16 @@
   --color-accent: #0033ff;
   --color-muted: rgba(0, 0, 0, 0.4);
   --color-border: rgba(0, 0, 0, 0.05);
+  --color-grid: #000;
+}
+
+.dark {
+  --color-bg: #0a0a0a;
+  --color-text: #f0f0f0;
+  --color-accent: #4d6fff;
+  --color-muted: rgba(255, 255, 255, 0.4);
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-grid: #fff;
 }
 
 html {
